@@ -8,9 +8,9 @@ int main() {
 	cout<<endl<<"Where is ssh? > ";
 	cin>>ssh_zone;
 
-	const string command = "ssh_add " + ssh_zone;
+	const string command = "ssh-add " + ssh_zone;
 
-	system("eval $(agent-ssh -s)");
+	system("eval $(ssh-agent -s)");
 
 	system(command.c_str());
 
